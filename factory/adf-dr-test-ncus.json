@@ -1,0 +1,9 @@
+{
+	"name": "adf-dr-test-ncus",
+	"location": "northcentralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cc41d39e-49c7-4aea-abde-6b9b911d518e",
+		"tenantId": "16b3c013-d300-468d-ac64-7eda0820b6d3"
+	}
+}
