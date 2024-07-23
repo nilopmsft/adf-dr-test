@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-dr-test-scus"
+		},
+		"BLOB_connectionString": {
+			"value": ""
+		},
+		"SQLDB_connectionString": {
+			"value": ""
+		},
+		"BLOBPE_properties_privateLinkResourceId": {
+			"value": "/subscriptions/df9f29b0-8a99-408f-bb18-fdeed1f47c62/resourceGroups/rg-adf-dr-test/providers/Microsoft.Storage/storageAccounts/blobadfdrtestscus"
+		},
+		"BLOBPE_properties_groupId": {
+			"value": "blob"
+		},
+		"BLOBPE_properties_fqdns": {
+			"value": [
+				"blobadfdrtestscus.blob.core.windows.net"
+			]
+		},
+		"SQLPE_properties_privateLinkResourceId": {
+			"value": "/subscriptions/df9f29b0-8a99-408f-bb18-fdeed1f47c62/resourceGroups/rg-adf-dr-test/providers/Microsoft.Sql/servers/sql-adf-dr-wus3"
+		},
+		"SQLPE_properties_groupId": {
+			"value": "sqlServer"
+		},
+		"SQLPE_properties_fqdns": {
+			"value": [
+				"sql-adf-dr-wus3.database.windows.net"
+			]
+		}
+	}
+}
