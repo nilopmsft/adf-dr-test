@@ -1,0 +1,7 @@
+{
+	"name": "BLOBPE",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/df9f29b0-8a99-408f-bb18-fdeed1f47c62/resourceGroups/rg-adf-dr-test/providers/Microsoft.Storage/storageAccounts/blobadfdrtestscus",
+		"groupId": "blob"
+	}
+}
