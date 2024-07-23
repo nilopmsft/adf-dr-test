@@ -1,0 +1,9 @@
+{
+	"name": "adf-dr-test-scus",
+	"location": "southcentralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d1d27882-96fd-4d43-9fbf-a017dcae213b",
+		"tenantId": "16b3c013-d300-468d-ac64-7eda0820b6d3"
+	}
+}
