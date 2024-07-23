@@ -1,0 +1,44 @@
+{
+	"name": "testDF",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "SQLDB",
+						"type": "DatasetReference"
+					},
+					"name": "SQLDB"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "BLOBPARQ",
+						"type": "DatasetReference"
+					},
+					"name": "BLOB"
+				}
+			],
+			"transformations": [
+				{
+					"name": "select1"
+				}
+			],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> SQLDB",
+				"SQLDB select(skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'parquet',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> BLOB"
+			]
+		}
+	}
+}
